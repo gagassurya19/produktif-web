@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan CSS Background</title>
+</head>
+<style>
+body{
+    margin: 100px;
+}
+.telkom{
+    color: white;
+    text-align: center;
+    background: linear-gradient(-45deg, #36d1dc, #5b86e5, #EE7752, #E73C7E, #23A6D5, #23D5AB); 
+}
+/* css latihan */
+.kiri{
+    width: 49%;
+    margin: 0;
+    height: 100px;
+    float: left;
+    overflow: visible;
+
+}
+.kanan{
+    width: 49%;
+    margin: 0;
+    float: right;
+    overflow: visible;
+}
+.tengah div{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.bgcolor{
+    background-color: aqua;
+}
+.bgimage{
+    background-image:url(https://www.tomswallpapers.com/large/201503/17858.jpg);
+}
+.bgposition{
+    color: white;
+    background: url(http://smktelkommedan.sch.id/img/ts.png) black no-repeat right;
+    background-size: 50px;
+    background-position-x: 20px;
+}
+.bggra1{
+    background: linear-gradient(to left, red, yellow, green);
+}
+.bggra2{
+    background: linear-gradient(red, yellow, green);
+}
+</style>
+<body>
+    <!-- latihan dasar css -->
+    <h1 class="telkom">SMK TELKOM MALANG</h1>
+
+    <div class="kiri">
+        <!-- backgroun-color -->
+        <div class="bgcolor">
+            <h1 align="center">Background-Color</h1>
+        </div>
+        <!-- background-image -->
+        <div class="bgimage">
+            <h1 align="center">Background-Image</h1>
+        </div>
+    </div>
+
+    <div class="kanan">
+        <!-- vertical gradient-background -->
+        <div class="bggra1">
+            <h1 align="center">Background-Gradient</h1>
+        </div>        
+        <!-- horizontal gradient-background -->
+        <div class="bggra2">
+            <h1 align="center">Background-Gradient</h1>
+        </div>
+    </div>
+
+    <div class="tengah">
+        <!-- background-position -->
+        <div class="bgposition">
+            <h1 align="center">Background-Position</h1>
+        </div>
+    </div>
+</body>
+</html>

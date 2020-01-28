@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan CSS navigation bar</title>
+</head>
+<style media="screen">
+    body{
+        margin: 2% 10% 0% 10%;
+    }
+.menu{
+    margin: 0;
+    width: 100%;
+    position: sticky;
+}
+nav{
+    width: 20%;
+    height: 400px;
+    background: maroon;
+}
+ul.horizontal{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: mediumblue;
+}
+ul.horizontal li{
+    float: left;
+}
+ul.horizontal li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+ul.horizontal li a:hover{
+    background-color: teal;
+}
+ul.vertical{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: tomato;
+}
+ul.vertical li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    text-align: left;
+}
+ul.vertical li a:hover{
+    background-color: violet;
+    color: white;
+}
+</style>
+<body>
+<div class="menu">
+    <ul class="horizontal">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Beranda</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Profile</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Kontak</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Layanan</a></li>
+    </ul>
+</div>
+<nav>
+    <ul class="vertical">
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Beranda</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Profile</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Kontak</a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer">Layanan</a></li>
+    </ul>
+</nav>
+</body>
+</html>

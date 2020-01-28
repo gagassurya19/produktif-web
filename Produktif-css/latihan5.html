@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan css position dan overflow</title>
+</head>
+<style>
+.container{
+    width: 50%;
+    height: 200px;
+    overflow: auto;
+    margin-left: 0 auto;
+}
+.static{
+    position: static;
+    border: 2px solid green;
+}
+.relative{
+    position: relative;
+    border: 2px solid red;
+    left: 20px; /* jarak posisi dari kiri */
+    bottom: 0; /* jarak posisi dari bawah */
+}
+.absolute{
+    position: absolute;
+    border: 2px solid blue;
+    left: 20px;
+    bottom: 40px;
+}
+.fixed{
+    position: fixed;
+    border: 2px solid black;
+    bottom: 0;
+    right: 0;
+}
+.sticky{
+    position: sticky;
+    border: 2px solid yellow;
+    top: 0;
+    left: 20px;
+    background: darkblue;
+    color: white;
+}
+</style>
+<body>
+    <div class="container">
+        <p class="sticky">
+            Ini adalah contoh dari posisi <b>Sticky</b>
+        </p>
+
+        <p class="static">
+           <b>ini adalah contoh dari position <u>Static</u></b>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+           Esse voluptatem et voluptates ipsam necessitatibus inventore 
+           totam neque, illum corporis voluptate quasi adipisci. Neque 
+           facere maiores ratione quis magni, in laudantium.
+        </p>
+
+        <p class="relative">
+            <b>ini adalah contoh dari position <u>Relative</u></b>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+            Voluptatum delectus ipsam repellendus, expedita a sapiente 
+            perspiciatis unde quasi sunt sit quidem totam quis, accusamus 
+            labore modi dignissimos ratione, similique asperiores.
+        </p>
+
+        <p class="absolute">
+            <b>ini adalah contoh dari position <u>Absolute</u></b>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Obcaecati quisquam veniam necessitatibus sed adipisci quam 
+            accusantium consequuntur rerum illo, aut fugiat distinctio 
+            labore, alias sunt? Adipisci tempora nesciunt asperiores 
+            facere!
+        </p>
+
+        <p class="fixed">
+            ini merupakan contoh dari position <b>Fixed</b>
+        </p>
+    </div>
+</body>
+</html>

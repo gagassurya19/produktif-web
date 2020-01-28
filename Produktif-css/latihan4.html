@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan css border</title>
+</head>
+<style>
+    body{
+        margin: 5%;
+    }
+    body b{
+        color: white;
+    }
+    .btn-red{
+        padding: 10px;
+        background: red;
+    }
+    .btn-blue{
+        padding: 10px;
+        background: blue;
+    }
+    .btn-green{
+        padding: 10px;
+        background: green;
+    }
+    .solid{
+        border-style: solid;
+        border-width: 4px;
+        border-color: black;
+    }
+    .dotted{
+        border-style: dotted;
+        border-width: 4px;
+        border-color: black;
+    }
+    .double{
+        border-style: double;
+        border-width: 4px;
+        border-color: black;
+    }
+    .ridge{
+        border-style: ridge;
+        border-width: 4px;
+    }
+    .inset{
+        border-style: inset;
+        border-width: 4px;
+    }
+    .outset{
+        border-style: outset;
+        border-width: 4px;;
+    }
+    .round{
+        border-radius: 20px;
+    }
+</style>
+<body>
+<fieldset>
+    <legend>Border Style</legend>
+    <p class="btn-red solid"><b>Solid</b></p>
+    <p class="btn-blue dotted"><b>Dotted</b></p>
+    <p class="btn-green ridge"><b>Ridge</b></p>
+    <p class="btn-red double"><b>Double</b></p>
+    <p class="btn-blue inset"><b>Inset</b></p>
+    <p class="btn-green outset"><b>Outset</b></p>
+</fieldset>
+<br>
+<fieldset class="round">
+    <legend>Round Border</legend>
+    <p class="btn-red solid"><b>Solid</b></p>
+    <p class="btn-blue dotted"><b>Dotted</b></p>
+    <p class="btn-green ridge"><b>Ridge</b></p>
+    <p class="btn-red double"><b>Double</b></p>
+    <p class="btn-blue inset"><b>Inset</b></p>
+    <p class="btn-green outset"><b>Outset</b></p>
+</fieldset>
+</body>
+</html>
