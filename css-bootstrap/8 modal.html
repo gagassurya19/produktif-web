@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+    <!-- bootstrap => Library dari bootstrap-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   
+    <!-- jquery dan bootstrap js -->
+    <!-- librari js yang mendukung kinerja bootstrap -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- latihan bootstrap-modal -->
+    <div class="container">
+        <h5>Bootstrap Modal</h5>
+        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#largeModal">
+            Large Modal
+        </button>
+        <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#mediumModal">
+            Medium Modal
+        </button>
+        <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#smallModal">
+            Small Modal
+        </button>
+    </div>
+
+    <!-- modal large -->
+    <div class="modal fade" id="largeModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h4>Large Modal</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam esse ea quaerat fugit sequi veniam distinctio 
+                    ratione officiis recusandae non, incidunt debitis, nobis 
+                    quae earum, minima totam. Possimus, consequatur. Labore 
+                    nissimos consectetur magni ullam neque nisi reiciendis 
+                    accusamus quam atque optio veniam tempora hic, 
+                    asperiores perferendis consequatur fugit rem adipisci?
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-sm btn-success">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal medium -->
+    <div class="modal fade" id="mediumModal">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h4>Medium Modal</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam esse ea quaerat fugit sequi veniam distinctio 
+                    ratione officiis recusandae non, incidunt debitis, nobis 
+                    quae earum, minima totam. Possimus, consequatur. Labore 
+                    nissimos consectetur magni ullam neque nisi reiciendis 
+                    accusamus quam atque optio veniam tempora hic, 
+                    asperiores perferendis consequatur fugit rem adipisci?
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-sm btn-info">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal small -->
+    <div class="modal fade" id="smallModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h4>Small Modal</h4>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam esse ea quaerat fugit sequi veniam distinctio 
+                    ratione officiis recusandae non, incidunt debitis, nobis 
+                    quae earum, minima totam. Possimus, consequatur. Labore 
+                    nissimos consectetur magni ullam neque nisi reiciendis 
+                    accusamus quam atque optio veniam tempora hic, 
+                    asperiores perferendis consequatur fugit rem adipisci?
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-sm btn-danger">Save</button>      
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

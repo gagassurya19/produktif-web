@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+    <!-- bootstrap => Library dari bootstrap-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   
+    <!-- jquery dan bootstrap js -->
+    <!-- librari js yang mendukung kinerja bootstrap -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- latihan bootstrap-grid -->
+    <div class="container">
+        <h5>Grid ukuran 'xl' (extra large) berlaku jika device 
+            berukuran sangat lebar (lebih dari 1200px)</h5>
+
+        <!-- class 'row' digunakan untuk mengatur div berposisi inline
+        (menyamping) tanpa class 'row', div akan berposisi (flow)
+        turun ke bawah -->
+
+        <div class="mb-3 row">
+            <div class="col-xl-6 bg-primary">
+                ini grid dengan ukuran 6/12
+            </div>
+            <div class="col-xl-3 bg-success">
+                ini grid dengan ukuran 3/12
+            </div>
+            <div class="col-xl-3 bg-danger">
+                ini grid dengan ukuran 3/12
+            </div>
+        </div>
+
+        <h5>Grid ukuran 'lg' (large) berlaku jika device berukuran 
+            sangat lebar (lebih dari 992px)</h5>
+            <div class="mb-3 row">
+                <div class="col-lg-4 bg-info">
+                    ini grid dengan ukuran 4/12
+                </div>
+                <div class="col-lg-6 bg-warning">
+                    ini grid dengan ukuran 6/12
+                </div>
+                <div class="col-lg-2 bg-success">
+                    ini grid dengan ukuran 2/12
+                </div>
+            </div>
+
+        <h5>Grid ukuran 'md' (medium) berlaku jika device berukuran 
+            sangat lebar (lebih dari 768px)</h5>
+            <div class="mb-3 row">
+                <div class="col-md-4 bg-info">
+                    ini grid dengan ukuran 4/12
+                </div>
+                <div class="col-md-3 bg-warning">
+                    ini grid dengan ukuran 3/12
+                </div>
+                <div class="col-md-2 bg-info">
+                    ini grid dengan ukuran 2/12
+                </div>
+                <div class="col-md-3 bg-danger">
+                    ini grid dengan ukuran 3/12
+                </div>
+            </div>
+
+        <h5>Grid ukuran 'sm' (small) berlaku jika device berukuran 
+            sangat lebar (lebih dari 576px)</h5>
+            <div class="mb-3 row">
+                <div class="col-sm-2 bg-primary">
+                    ini grid dengan ukuran 2/12
+                </div>
+                <div class="col-sm-3 bg-info">
+                    ini grid dengan ukuran 3/12
+                </div>
+                <div class="col-sm-4 bg-success">
+                    ini grid dengan ukuran 4/12
+                </div>
+                <div class="col-sm-3 bg-warning">
+                    ini grid dengan ukuran 3/12
+                </div>
+            </div>
+    </div>
+</body>
+</html>

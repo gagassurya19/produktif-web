@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navbar</title>
+    <!-- bootstrap => Library dari bootstrap-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   
+    <!-- jquery dan bootstrap js -->
+    <!-- librari js yang mendukung kinerja bootstrap -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- latihan navigation-bar -->
+    <nav class="navbar navbar-expand-md bg-danger navbar-dark fixed-top">
+        <!-- navbar-expand-md => Menu akan hidden ketika tampilan device berukuran 'Medium'
+        bg-danger => navbar akan memiliki background warna 'merah'
+        navbar-dark => tulisan menu pada navbar akan lebih gelap
+        fixed-top => navbar akan berposisi SELALU DIATAS -->
+
+        <a href="">
+            <img src="/gambar/pngwave.png" width="150" alt="" srcset="">
+        </a>
+
+        <!-- pemanggil icon menu saat menubar disembunyikan -->
+        <button type="submit" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar navbar-toggler-icon"></span>
+        </button>
+
+        <!-- daftar menu pada navbar -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Profile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Testimoni</a></li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle" id="kontak" data-toggle="dropdown">Kontak</a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Facebook</a>
+                        <a href="#" class="dropdown-item">Instagram</a>
+                        <a href="#" class="dropdown-item">Twitter</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
