@@ -1,0 +1,74 @@
+
+/* navbar */
+.navbar{
+  background-color: transparent;
+  transition: ease all 1s;
+  -webkit-transition: ease all 1s;
+  -moz-transition: ease all 1s;
+  -o-transition: ease all 1s;
+}
+.navbar-scroll{
+  background-color: #2193b0;  /* fallback for old browsers */
+  background-color: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background-color: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 45px;
+}
+.navbar-brand{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* jumbotron */
+.jumbotron {
+  background: url('../../../../gambar/DSC04694.JPG') no-repeat center center fixed;
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  border-radius: 0;
+}
+
+/* banner-content */
+#banner-content .card{
+  background: url('../../../../gambar/DSC04694.JPG') no-repeat center center fixed;
+  height: 30vh;
+  min-height: 20px;
+  border-radius: 5px;
+}
+
+/* card-content */
+.card-img{
+  background: url('../../../../gambar/P1110634.JPG') no-repeat center;
+  background-size: cover;
+  height: 32vh;
+  min-height: 20px;
+  border-radius: 5px 0 0 5px;
+}
+.card-img-right{
+  background: url('../../../../gambar/P1110634.JPG') no-repeat center;
+  background-size: cover;
+  height: 32vh;
+  min-height: 20px;
+  border-radius: 0 5px 5px 0;
+}
+.card-content img{
+  width: 0 auto;
+  height: 250px;
+}
+
+/* body-content */
+.contentbar{
+  border-radius: 5px;
+}
+.sidebar{
+  border-radius: 5px;
+}
+
+/* footer */
+.madeby a{
+  text-decoration: none;
+  color: white;
+}
+.madeby a:hover{
+  color: rgb(155, 155, 155);
+}
