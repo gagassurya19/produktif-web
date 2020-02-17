@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Javascript</title>
+    <!-- css-bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- js-bootstrap -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row p-3">
+            <div class="card col-sm-4">
+                <div class="card-header bg-primary text-white">
+                    <h4>Basic Alert</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Alert onClick -->
+                    <button type="button" class="btn btn-success"
+                    onclick="alert('Thank you for coming')">
+                    Click Me
+                    </button>
+
+                    <!-- Alert onMouseOver -->
+                    <button type="button" class="btn btn-warning"
+                    onmouseover="alert('Thank you for coming')">
+                    Hover Me
+                    </button>
+                </div>
+            </div>
+
+            <!-- card text -->
+            <div class="card col-sm-4">
+                <div class="card-header bg-info text-white">
+                    <h4>Ini Text ber ID Message</h4>
+                </div>
+                <input type="text" name="Text Area" id="message" class="m-4">
+            </div>
+
+            <div class="card col-sm-4">
+                <div class="card-header bg-secondary text-white">
+                    <h4>Basic Alert with ID</h4>
+                </div>
+                <div class="card-body">
+                    <!-- Alert Onclick with ID -->
+                    <button type="button" class="btn btn-success"
+                    onclick="alert(document.getElementById('message').value)">
+                    Click And Show
+                    </button>
+
+                    <!-- Alert OnMouseOver with ID -->
+                    <button type="button" class="btn btn-success"
+                    onmouseover="alert(document.getElementById('message').value)">
+                    Hover And Show
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="fixed-bottom text-center">
+        <p>Gagassurya19 <br>
+        2020</p>
+    </div>
+</body>
+</html>

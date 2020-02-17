@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Style | Javascript</title>
+</head>
+<!-- css-bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!-- js-bootstrap -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script type="text/javascript">
+    EditStyle = () => {
+        // Mengambil nilai dari element (editStyle)
+        let p = document.getElementById('panjang').value;
+        let l = document.getElementById('lebar').value;
+        let w = document.getElementById('warna').value;
+        let w1 = document.getElementById('warna1').value;
+
+        // edit style
+        document.getElementById('tampil').style.width = p + "%";
+        document.getElementById('tampil').style.height = l + "%";
+        let color = "linear-gradient(to right, " + w + ", " + w1 +")";
+        document.getElementById('tampil').style.background = color;
+
+        // kode warna
+        let code = w + ", " + w1;
+        document.getElementById('exportColor').value = code;
+        document.getElementById('exportCode').value = color;
+    }
+</script>
+<body onload=EditStyle();>
+    <div class="container">
+        <div class="row">
+            <!-- setting -->
+            <div class="card col-sm-4">
+                <div class="card-header">
+                    <h4>Change Style | Setting</h4>
+                </div>
+                <div class="card-body" onload=EditStyle();>
+                    panjang
+                    <input type="number" name="panjang" id="panjang" class="form-control" value="20" onchange=EditStyle();>
+                    lebar
+                    <input type="number" name="lebar" id="lebar" class="form-control" value="20" onchange=EditStyle();>
+                    warna 1
+                    <input type="color" name="warna" id="warna" class="form-control" value="#00ff00" onchange=EditStyle();>
+                    warna 2
+                    <input type="color" name="warna1" id="warna1" class="form-control" value="#fff701" onchange=EditStyle();>
+                    Kode warna
+                    <input type="text" name="Color" id="exportColor" class="form-control">
+                    <input type="text" name="Color" id="exportCode" class="form-control">
+                    <br><p class="text-center">Satuan menggunakan persentase</p>
+                    <!-- <button type="button" class="btn btn-success btn-block" onclick=EditStyle();>
+                    Change
+                    </button> -->
+                </div>
+            </div>
+            <!-- Export -->
+            <div class="card col-sm-8 container">
+                <div class="card-header">
+                    <h4>Hasil</h4>
+                </div>
+                <div class="card-body" style="overflow: auto;">
+                    <div id="tampil"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="fixed-bottom text-center">
+        <p>
+            Gagassurya19
+            <br>
+            2020
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send and Get | JavaScript</title>
+</head>
+<!-- css-bootstrap -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!-- js-bootstrap -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script type="text/javascript">
+    count = () =>{
+    // Mengambil nilai dari elemen (getValue)
+        let panjang = document.getElementById('panjang').value;
+        let lebar = document.getElementById('lebar').value;
+        let hasil = panjang * lebar;
+
+    // Menentukan nilai pada elemen (setValue)
+        document.getElementById('hasil').value = hasil;
+    }
+</script>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="card col-sm-4 mx-auto">
+            <div class="card-header">
+                <h4>Hitung Luas Persegi Panjang</h4>
+            </div>
+            <div class="card-body">
+                Panjang
+                <input type="number" id="panjang" class="form-control">
+                Lebar
+                <input type="number" id="lebar" class="form-control">
+                <br>
+                <button type="button" class="btn btn-info btn-block" onclick="count()">
+                Hitung
+                </button>
+                Hasil
+                <input type="text" name="Hasil" id="hasil" class="form-control" readonly>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div class="fixed-bottom text-center">
+    <p>
+        Gagassurya19
+        <br>
+        2020
+    </p>
+</div>
+</body>
+</html>
