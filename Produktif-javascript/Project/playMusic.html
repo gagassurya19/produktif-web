@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music</title>
+    <!-- css-bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- js-bootstrap -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        let song = new Audio("../assets/music/11 Membasuh (feat. Rara Sekar).m4a");
+        volume = () =>{
+            song.volume();
+        }
+        pause = () =>{
+            song.pause();
+        }
+        play = () => {
+            song.play();
+        }
+    </script>
+    <style>
+        .listMusic{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <!-- box1 -->
+            <div class="card col-sm-4">
+                <div class="card-header bg-primary text-white">
+                    <h4>Play Music Now!</h4>
+                </div>
+                <div class="card-body">
+                    <!-- image -->
+                    <div id="image">
+                        <img src="../assets/gambar/P1110622.JPG" alt="" width="100%">
+                    </div>
+                    <!-- pause play stop -->
+                    <div id="control" class="m-2">
+                        <div class="btn-group col-sm" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-warning" onclick="pause();">Pause</button>
+                            <button type="button" class="btn btn-success" onclick="play();">Start</button>
+                            <button type="button" class="btn btn-danger" onclick="stop();">Stop</button>
+                        </div>
+
+                    </div>
+                    <!-- list music -->
+                    <div id="listMusic" class="overflow-auto" style="height: 150px; border: 1px solid grey; border-radius: 5px;">
+                        <ul class="list-group" style="cursor: pointer;">
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                              Cras justo odio
+                              <span class="badge badge-primary badge-pill">5</span>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                              Dapibus ac facilisis in
+                              <span class="badge badge-primary badge-pill">2</span>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                              Morbi leo risus
+                              <span class="badge badge-primary badge-pill">1</span>
+                            </li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Cras justo odio
+                                <span class="badge badge-primary badge-pill">5</span>
+                              </li>
+                              <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Dapibus ac facilisis in
+                                <span class="badge badge-primary badge-pill">2</span>
+                              </li>
+                              <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                Morbi leo risus
+                                <span class="badge badge-primary badge-pill">1</span>
+                              </li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- box2 -->
+            <div class="card col-sm-8">
+                <div class="card-header bg-primary text-white">
+                    <h4>Lyrics</h4>
+                </div>
+                <div class="card-body">
+                    <div class="col-sm-5 mx-auto">
+                        <p class="text-center">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem officiis temporibus 
+                            at tenetur maiores, doloribus, sequi corrupti non dolore nisi repellat quo! Expedita 
+                            distinctio sunt aspernatur, incidunt beatae possimus culpa!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="fixed-bottom text-center">
+        <p>
+            Gagassurya19
+            <br>
+            2020
+        </p>
+    </div>
+</body>
+</html>

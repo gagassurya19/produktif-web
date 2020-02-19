@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form | Javascript</title>
+    <!-- css-bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- js-bootstrap -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript"> 
+        login = () => {
+            // mengambil data yang diinput
+            let usr = document.getElementById('username').value;
+            let pw = document.getElementById('password').value;
+            let element = document.getElementById('pesan');
+
+            // if else user dan pw
+            if(usr == '123' && pw == '123'){
+                element.className = "";
+                element.classList.add("alert");
+                element.classList.add("alert-success");
+                element.innerText += " Selamat! Login berhasil. ";
+            }else{
+                element.className = "";
+                element.classList.add("alert");
+                element.classList.add("alert-danger");
+                element.innerText += "Password/Username salah!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-5 mx-auto">
+            <div class="card col-sm-12">
+                <div class="card-header bg-primary text-white">
+                    <h4>Login Form</h4>
+                </div>
+                <div class="card-body">
+                    <!-- alert -->
+                   
+                    <div class="row">
+                        <div id="pesan"></div>
+                        <!-- form-login -->
+                        Username
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Username">
+                        Password
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                        <button type="button" class="btn btn-success btn-bock m-2 form-control" onclick="login();">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="fixed-bottom text-center">
+        <p>
+            Gagassurya19
+            <br>
+            2020
+        </p>
+    </div>
+</body>
+</html>
