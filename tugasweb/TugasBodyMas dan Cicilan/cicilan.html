@@ -11,10 +11,51 @@
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script type="text/javascript">
-    
+        hitung = () => {
+            // deklarasi
+            let nom = document.getElementById('nominal').value;
+            let periode = document.getElementById('periode').value;
+            let bunga = document.getElementById('bunga').value;
+
+            // kalkulasi
+            let sebulan = nom/periode;
+            let hasil_bunga = nom/100*bunga;
+            let cicilan = sebulan + hasil_bunga;
+
+            //output
+            document.getElementById('hasil').value = "Rp. "+cicilan;
+        }
     </script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="card col-sm-5 mx-auto">
+                <div class="card-header">
+                    <h4>Cicilan</h4>
+                </div>
+                <div class="card-body">
+                    <label class="col-sm-4">Nominal</label> 
+                    <input type="number" name="nominal" id="nominal" class="col-sm-7">
+                    <label class="col-sm-4 mt-2">Periode</label>
+                    <select class="col-sm-7" id="periode">
+                        <option value="12">12</option>
+                        <option value="24">24</option>
+                        <option value="36">36</option>
+                    </select>
+                    <label class="col-sm-4">Bunga(%) /tahun</label>
+                    <input type="number" name="bunga" id="bunga" class="col-sm-7">
+                    <button type="button" class="form-control bg-success text-white" onclick="hitung();">Hitung</button>
+                    
+                    <label class="col-sm-4 mt-2">Cicilan</label>
+                    <input type="text" name="hasil" id="hasil" class="col-sm-7">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="fixed-bottom text-center">
+        <p>Gagassurya19 <br> 2020</p>
+    </div>
 </body>
 </html>
