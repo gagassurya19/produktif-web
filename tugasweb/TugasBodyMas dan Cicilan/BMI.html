@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index | 20 feb 2020</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- js -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+    hitung = () =>{
+        // mengambil data inputan
+        let berat = document.getElementById('berat').value;
+        let tinggi = document.getElementById('tinggi').value;
+        
+        // kalkulasi
+        tinggi /= 100;
+        let hasil = berat / (tinggi*tinggi);
+
+        // ifelse
+        if(hasil <= 18.5){
+            document.getElementById('hasil').value = "Anda Kurus";
+        } else if(hasil >= 18.5 && hasil <= 22.9){
+            document.getElementById('hasil').value = "Anda Normal";
+        } else if(hasil >= 23 && hasil <= 24.9){
+            document.getElementById('hasil').value = "Anda Obesitas";
+        } else{
+            document.getElementById('hasil').value = "Anda Tidak Normal";
+        }
+        
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card col-sm-5 mx-auto">
+                <div class="card-header">
+                    <h4>Body Mass Index</h4>
+                </div>
+                <div class="card-body">
+                    Berat (kg)
+                    <input type="number" name="berat" id="berat" class="form-control">
+                    Tinggi (cm)
+                    <input type="number" name="tinggi" id="tinggi" class="form-control">
+                    <button type="button" id="button" class="form-control" onclick="hitung();" >
+                        Hitung
+                    </button>
+                    Hasil
+                    <input type="text" id="hasil" class="form-control text-center" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
