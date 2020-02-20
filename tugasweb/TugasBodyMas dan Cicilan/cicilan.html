@@ -13,14 +13,12 @@
     <script type="text/javascript">
         hitung = () => {
             // deklarasi
-            let nom = document.getElementById('nominal').value;
+            let nominal = document.getElementById('nominal').value;
             let periode = document.getElementById('periode').value;
             let bunga = document.getElementById('bunga').value;
 
             // kalkulasi
-            let sebulan = nom/periode;
-            let hasil_bunga = nom/100*bunga;
-            let cicilan = sebulan + hasil_bunga;
+            let cicilan = (nominal/periode) + (nominal/100*bunga); //Cicilan + jumlah bunga
 
             //output
             document.getElementById('hasil').value = "Rp. "+cicilan;
