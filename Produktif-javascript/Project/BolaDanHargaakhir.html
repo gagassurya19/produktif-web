@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola | Harga Akhir</title>
+    <!-- css-bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- js-bootstrap -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+    // HITUNG BOLA
+        luasP = () => {
+            // deklarasi
+            let jari = document.getElementById('jari').value;
+
+            // kalkulasi
+            let hasilLuas = 4 * Math.PI * Math.pow(jari, 2);
+
+            // print
+            document.getElementById('hLuas').value = hasilLuas; // real
+            document.getElementById('hLuasBulat').value = Math.round(hasilLuas); // Dibulatkan
+        }
+        volumeB = () =>{
+            // deklarasi
+            let jari = document.getElementById('jari').value;
+
+            // kalkulasi
+            let hasilVolume = 4/3 * Math.PI * Math.pow(jari, 3);
+
+            // print
+            document.getElementById('hVolume').value = hasilVolume; // real
+            document.getElementById('hVolumeBulat').value = Math.round(hasilVolume); // DIbulatkan
+        }
+    
+    // HITUNG HARGA AKHIR
+        Hitung = () => {
+            // deklarasi
+            let hargaDasar = Number(document.getElementById('HargaDasar').value);
+            let ppn = Number(document.getElementById('ppn').value);
+            let diskon = Number(document.getElementById('diskon').value);
+
+            // kalkulasi
+            let hasil = ((hargaDasar * ppn) / 100) + hargaDasar - ((hargaDasar * diskon) / 100);
+
+            // Print
+            document.getElementById('Hitung').value = hasil; // Real
+            document.getElementById('HitungBulat').value = Math.round(hasil); // Bulat
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-12">
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills">
+                       
+                        <li class="nav-item">
+                            <a class="btn btn-dark text-white" data-toggle="collapse" href="#welcome" role="button" aria-expanded="false" aria-controls="collapseBola">
+                                Welcome
+                            </a>
+                        </li>
+
+                        <!-- ButtonBola -->
+                        <li class="nav-item">
+                            <a class="btn btn-success" data-toggle="collapse" href="#collapseBola" role="button" aria-expanded="false" aria-controls="collapseBola">
+                                Bola
+                            </a>
+                        </li>
+                        <!-- End ButtonBola -->
+
+                        <!-- ButtonHargaAkhir -->
+                        <li class="nav-item">
+                            <a class="btn btn-success" data-toggle="collapse" href="#collapseHarga" role="button" aria-expanded="false" aria-controls="collapseHarga">
+                                Harga Akhir
+                            </a>
+                        </li>
+                        <!-- End ButtonHargaAkhir -->
+
+                    </ul>
+                </div>
+                
+                <!-- bodyWelcome -->
+                <div id="welcome">
+                <div class="card-body">
+                    <h5 class="card-title">Selamat Datang</h5>
+                    <p class="card-text">Semoga Tools ini dapat membantu anda.</p>
+                    <a class="btn btn-success" data-toggle="collapse" href="#collapseBola" role="button" aria-expanded="false" aria-controls="collapseBola">
+                        Bola
+                    </a>
+                    <a class="btn btn-success" data-toggle="collapse" href="#collapseHarga" role="button" aria-expanded="false" aria-controls="collapseHarga">
+                        Harga Akhir
+                    </a>
+                  </div>
+                </div>
+                <!-- End bodyWelcome -->
+
+                <!-- bodyBola -->
+                <div class="collapse" id="collapseBola">
+                    <div class="card card-body">
+                        <div class="container">
+                            <div class="mx-auto m-2 mb-3">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h4>Aplikasi Hitung LP & Volume Bola</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-4 mb-3">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h4>Setting</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        Masukkan Jari - Jari
+                                        <input type="number" name="jari" id="jari">
+                                        <button type="button" class="btn btn-success btn-block m-2 mx-auto" onclick="luasP();" >Hitung Luas Permukaan</button>
+                                        <button type="button" class="btn btn-success btn-block m-2 mx-auto" onclick="volumeB();">Hitung Volume Bola</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h4>Hasil/Result</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="hasilLuas" class="m-2">
+                                            <h4>Luas Permukaan</h4>
+                                            <input type="number" name="hluas" id="hLuas">
+                                            == 
+                                            <input type="number" name="hLuasBulat" id="hLuasBulat">
+                                        </div>
+                                        <div id="hasilVolume" class="m-2">
+                                            <h4>Volume Balok</h4>
+                                            <input type="number" name="hVolume" id="hVolume">
+                                            == 
+                                            <input type="number" name="hVolumeBulat" id="hVolumeBulat">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End bodyBola -->
+
+                <!-- bodyHargaAkhir -->
+                <div class="collapse" id="collapseHarga">
+                    <div class="card card-body">
+                        <div class="container">
+                            <div class="mx-auto m-2 mb-3">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h4>Aplikasi Hitung Harga Akhir</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-sm-5 mb-3">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h4>Setting</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <p class="col-sm-4">Harga Dasar</p>
+                                        <input type="number" name="HargaDasar" id="HargaDasar" class="col-sm-8">
+                                        
+                                        <p class="col-sm-4">PPN (%)</p>
+                                        <input type="number" name="ppn" id="ppn" class="col-sm-8">
+                                       
+                                        <p class="col-sm-4">DISKON (%)</p>
+                                        <input type="number" name="diskon" id="diskon" class="col-sm-8">
+                                        <button type="button" class="btn btn-success btn-block m-2 mx-auto" onclick="Hitung();">Hitung Harga Akhir</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="card text-center">
+                                    <div class="card-header">
+                                        <h4>Hasil/Result</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="hasilHitung" class="m-2">
+                                            <h4>Harga Akhir</h4>
+                                            <input type="number" name="Hitung" id="Hitung">
+                                            == 
+                                            <input type="number" name="HitungBulat" id="HitungBulat">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End bodyHargaAkhir -->
+
+                <div class="card-footer text-center">
+                    <p class=" mt-1"><a href="http://instagram.com/gagassurya19" target="_blank" rel="noopener noreferrer">&copy;2020</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.nav-item a{
+    margin-right: 5px;
+}
+
+.card-footer a{
+    text-decoration: none;
+    color: black;
+}
+.card-footer a:hover{
+    color: rgb(51, 96, 126);
+}
