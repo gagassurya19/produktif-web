@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Bilangan</title>
+    <!-- css-bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style_konversi.css">
+    <!-- js-bootstrap -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        oktal = () =>{
+            // ngambil data #desimal
+            let input = Number(document.getElementById('desimal').value);
+            // Konversi
+            let oktal = input.toString(8);
+            // print
+            document.getElementById('hasil').value = oktal;
+        }
+        biner = () =>{
+            // ngambil data #desimal
+            let input = Number(document.getElementById('desimal').value);
+            // Konversi
+            let biner = input.toString(2);
+            // print
+            document.getElementById('hasil').value = biner;
+        }
+        hexa = () =>{
+            // ngambil data #desimal
+            let input = Number(document.getElementById('desimal').value);
+            // Konversi
+            let hexa = input.toString(16).toUpperCase();
+            // print
+            document.getElementById('hasil').value = hexa;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-sm-6 mx-auto">
+            <div class="card text-center">
+                <div class="card-header bg-success text-light">
+                    <h4>Konversi Bilangan</h4>
+                </div>
+                <div class="card-body">
+                    Input Bilangan Desimal
+                    <input type="number" name="desimal" id="desimal" class="form-control mb-2">
+                    <button type="button" class="btn btn-success col-sm-6" onclick="oktal();">OKTAL</button>
+                    <button type="button" class="btn btn-success col-sm-6" onclick="biner();">BINER</button>
+                    <button type="button" class="btn btn-success col-sm-6" onclick="hexa();">HEXA</button>
+                    <input type="text" name="hasil" id="hasil" class="form-control text-center" placeholder="Hasilnya disini">
+                </div>
+                <div class="card-footer">
+                    <p>&copy;2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
