@@ -35,6 +35,17 @@
             // print
             document.getElementById('hasil').value = hexa;
         }
+        
+        // Menu Dropdown
+        konversi = () =>{
+            // deklarasi
+            let basis = document.getElementById('basis').value;
+            let input = Number(document.getElementById('desimal').value);
+            // Konversi
+            let hasil = input.toString(basis);
+            // print
+            document.getElementById('hasil').value = hasil;
+        }
     </script>
     <style>
         body{
@@ -55,9 +66,28 @@
                 <div class="card-body">
                     Input Bilangan Desimal
                     <input type="number" name="desimal" id="desimal" class="form-control mb-2 text-center" value="12345">
-                    <button type="button" class="btn btn-success col-sm-6" onclick="oktal();">OKTAL</button>
+                    
+                    <!-- Menu Button -->
+                    <!-- <button type="button" class="btn btn-success col-sm-6" onclick="oktal();">OKTAL</button>
                     <button type="button" class="btn btn-success col-sm-6" onclick="biner();">BINER</button>
-                    <button type="button" class="btn btn-success col-sm-6" onclick="hexa();">HEXA</button>
+                    <button type="button" class="btn btn-success col-sm-6" onclick="hexa();">HEXA</button> -->
+                    <!-- Menu Button -->
+
+                    <!-- Menu DropDown -->
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="basis">Konversi Ke : </label>
+                        </div>
+                        <select class="custom-select" id="basis">
+                          <option selected>Choose...</option>
+                          <option value="8">Oktal</option>
+                          <option value="2">Biner</option>
+                          <option value="16">hexa</option>
+                        </select>
+                      </div>
+                    <button type="button" class="btn btn-success col-sm-6" onclick="konversi();">Convert</button>
+                    <!-- Menu DropDown -->
+
                     <input type="text" name="hasil" id="hasil" class="form-control text-center" placeholder="Hasilnya disini" readonly>
                 </div>
                 <div class="card-footer">
