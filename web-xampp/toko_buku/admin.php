@@ -62,52 +62,54 @@
         </div>
         <!-- start-body -->
         <div class="card-body">
-          <!-- start-search -->
-          <form action="admin.php" method="post">
-            <input type="text" name="find" class="form-control mb-2 col-sm-3 float-right" placeholder="Pencarian...">
-          </form>
-          <!-- end-search -->
-          <table class="table border">
-            <thead>
-              <th>No.</th>
-              <th>ID Admin</th>
-              <th>Nama</th>
-              <th>Kontak</th>
-              <th>Username</th>
-              <th>Password</th>
-              <th>Option</th>
-            </thead>
-            <tbody>
-              <?php
-                $number = 1;
-                foreach ($query as $admin): ?>
-                <tr>
-                  <td>
-                    <?php echo $number ?>
-                  </td>
-                  <td><?php echo $admin["id_admin"] ?></td>
-                  <td><?php echo $admin["nama"] ?></td>
-                  <td><?php echo $admin["kontak"] ?></td>
-                  <td><?php echo $admin["username"] ?></td>
-                  <td><?php echo $admin["password"] ?></td>
-                  <td>
-                    <button type="button" name="Edit" class="btn btn-sm btn-info"
-                            data-toggle="modal" data-target="#modal_admin"
-                            onclick='Edit(<?php echo json_encode($admin);?>)'>Edit</button>
+          <div class="overflow-auto">
+            <!-- start-search -->
+            <form action="admin.php" method="post">
+              <input type="text" name="find" class="form-control mb-2 col-sm-3 float-right" placeholder="Pencarian...">
+            </form>
+            <!-- end-search -->
+            <table class="table border text-center">
+              <thead>
+                <th>No.</th>
+                <th>ID Admin</th>
+                <th>Nama</th>
+                <th>Kontak</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Option</th>
+              </thead>
+              <tbody>
+                <?php
+                  $number = 1;
+                  foreach ($query as $admin): ?>
+                  <tr>
+                    <td>
+                      <?php echo $number ?>
+                    </td>
+                    <td><?php echo $admin["id_admin"] ?></td>
+                    <td><?php echo $admin["nama"] ?></td>
+                    <td><?php echo $admin["kontak"] ?></td>
+                    <td><?php echo $admin["username"] ?></td>
+                    <td><?php echo $admin["password"] ?></td>
+                    <td>
+                      <button type="button" name="Edit" class="btn btn-sm btn-info"
+                              data-toggle="modal" data-target="#modal_admin"
+                              onclick='Edit(<?php echo json_encode($admin);?>)'>Edit</button>
 
-                    <a href="process_crud_admin.php?hapus=true&id_admin=<?php echo $admin["id_admin"];?>"
-                        onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')">
-                        <button type="button" name="Hapus" class="btn btn-sm btn-danger"
-                                data-toggle="modal" data-target="#modal_admin"
-                                onclick="Hapus(<?php ?>);">
-                          Hapus
-                        </button>
-                    </a>
-                  </td>
-                </tr>
-              <?php $number++; endforeach; ?>
-            </tbody>
-          </table>
+                      <a href="process_crud_admin.php?hapus=true&id_admin=<?php echo $admin["id_admin"];?>"
+                          onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')">
+                          <button type="button" name="Hapus" class="btn btn-sm btn-danger"
+                                  data-toggle="modal" data-target="#modal_admin"
+                                  onclick="Hapus(<?php ?>);">
+                            Hapus
+                          </button>
+                      </a>
+                    </td>
+                  </tr>
+                <?php $number++; endforeach; ?>
+              </tbody>
+            </table>
+            </div>
           <button type="button" name="btnTambah" class="btn btn-sm btn-success float-right"
                   data-toggle="modal" data-target="#modal_admin" onclick="Add();">Tambah Data</button>
         </div>
