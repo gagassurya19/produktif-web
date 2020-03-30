@@ -15,6 +15,7 @@
     <div class="container">
       <!-- start-card -->
       <div class="mx-auto col-sm-6 mt-5">
+        <p class="text-center" href="#" style="font-family: 'Shadows Into Light', cursive; font-size: 250%;">Toko Buku</p>
         <div class="card">
           <div class="card-header bg-success text-light text-center">
             <h4>Login Admin</h4>
