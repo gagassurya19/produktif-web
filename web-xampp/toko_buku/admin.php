@@ -1,4 +1,9 @@
 <?php
+  session_start();
+  if (!isset($_SESSION["id_admin"])) {
+    header("location:login_admin.php");
+  }
+
   // mengambil file config.php
   // agar tidak perlu membuat koneksi baru
   include("config.php");
@@ -34,6 +39,12 @@
     </script>
   </head>
   <body>
+    <!-- Start-Navbar -->
+    <?php
+      include("navbar_admin.php");
+    ?>
+    <!-- End-Navbar -->
+
     <?php
       // Perintah SQL untuk Menampilkan Data Admin
       if (isset($_POST["find"])) {
