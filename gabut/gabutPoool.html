@@ -1,0 +1,140 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabut Gaes | Gagassurya19</title>
+    <!-- css-bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- js-bootstrap -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        // alert Input nama 
+        alertNama = () =>{
+            $('#alertNama').appendTo("body").modal('show');
+            return false;
+        }
+
+        // tampung Nama
+        tampungNama = () =>{
+            var nama = document.getElementById('namaPasangan').value;
+            if(nama == ""){
+                document.getElementById('printNama').innerText = "...";
+                document.getElementById('printNama1').innerHTML = "...";
+                document.getElementById('printNama2').innerHTML = "...";
+            } else {
+                document.getElementById('printNama').innerHTML = nama;
+                document.getElementById('printNama1').innerHTML = nama;
+                document.getElementById('printNama2').innerHTML = nama;
+            }
+        }
+
+        // card ungkapan 
+        cardUngkapan = () =>{
+            $('#cardUngkapan').appendTo("body").modal('show');
+            return false;
+        }
+
+        // gerak kesana kemari
+        var no = 1;
+        alhamdulillah = () =>{
+            $('#cardTerimakasih').appendTo("body").modal('show');
+            return false;
+        }
+        harusnyaTerima = () =>{
+            if (no == 1){
+                nggak.style.top = -15 + "%";
+                nggak.style.left = 15 + "%";
+                no = 2;
+            } else if(no == 2){
+                nggak.style.top = 15 + "%";
+                nggak.style.left = 15 + "%";
+                no = 3;
+            } else if(no == 3){
+                nggak.style.top = 15 + "%";
+                nggak.style.left = -15 + "%";
+                no = 4;
+            } else if(no == 4){
+                nggak.style.top = -15 + "%";
+                nggak.style.left = -15 + "%";
+                no = 1;
+            }
+        }
+    </script>
+</head>
+<style media="screen">
+    #cardUngkapan{
+        position: absolute;
+        top: 16%; 
+    }
+    #nggak{
+        position: absolute;
+        left:0px; 
+        top:-15%; 
+        width:100%; 
+        height:100%;
+    }
+</style>
+<body onload="alertNama()">
+   
+    <!-- Modal-Terimaka -->
+    <div class="modal fade" id="cardTerimakasih" tabindex="-1" role="dialog" aria-labelledby="cardTerimakasih" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <br>
+                    <br>
+                    <br>
+                    <h3>Terimakasih :)<br><span id="printNama2"></span></h3>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="" class="badge badge-info" onclick="history.go(0)">Mulai Ulang?</a>
+                    <a href="https://www.instagram.com/Gagassurya19" class="badge badge-warning">Coded</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- btn-buka -->
+    <div class="text-center" style="position: absolute; left: 48%; top: 46%;">
+    <h3>Hi, <span id="printNama"></span></h3>
+    <button type="button" class="btn btn-primary" onclick="cardUngkapan()">Buka</button>
+    </div>
+
+    <!-- Modal-Ungkapan -->
+    <div class="modal fade" id="cardUngkapan" tabindex="-1" role="dialog" aria-labelledby="cardUngkapan" aria-hidden="true" data-backdrop="static">
+        <div id="nggak">
+            <div class="modal-dialog modal-dialog-centered" role="dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <h3>Maukah Kamu, <span id="printNama1"></span> Jadi Teman Hidupku ?</h3>
+                            <button type="submit" class="btn btn-success" data-dismiss="modal" onClick="alhamdulillah()">Terima</button>
+                            <a class="btn" href="#" onMouseOver="harusnyaTerima()">Tolak</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Modal-Nama -->
+    <div class="modal fade" id="alertNama" tabindex="-1" role="dialog" aria-labelledby="alertNama" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="alert">
+            <div class="modal-content">
+                <div class="modal-body">
+                    Masukkan Nama Kamu ?
+                    <div class="input-group">
+                        <input type="text" id="namaPasangan" class="form-control" data-keyboard="false" placeholder="Masukkan Nama">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-success" data-dismiss="modal" onclick="tampungNama()">Simpan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
